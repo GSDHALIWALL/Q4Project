@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	<title>Q4 | Project</title>
+    
+    <style>
+    body   {
+    	background-color: #F8C471 ;
+    }
+    #Pogi1 {
+		background-color: #212F3C;
+		font-family: 'Kalam', cursive;
+	}
+	
+	.container {
+		background-color: black;
+		color: orange;
+		border-radius: 50px;
+		padding: 25px;
+		margin: 40px auto;
+		max-width: 900px;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+	}
+
+	h1 {
+		font-size: 36px;
+		text-decoration: underline;
+		font-family: 'Kalam', cursive;
+	}
+  p {
+  	font-size: 20px;
+	  margin-bottom: 10px;
+	  font-family: 'Courier Prime', monospace;
+  }
+
+	input[type="number"] {
+		padding: 10px;
+		border: 2px ;
+		border-radius: 5px;
+		font-size: 16px;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	button[type="submit"] {
+		padding: 10px 20px;
+		background-color: orange;
+		color: white;
+		border: none;
+		border-radius: 20px;
+		font-size: 16px;
+		cursor: pointer;
+		transition: background-color 0.2s ease;
+		margin: 5px;
+	  font-family: 'Courier Prime', monospace;
+	}
+
+	button[type="submit"]:hover {
+		background-color: #AF601A ;
+	}
+
+
+	span {
+		font-weight: bold;
+		color: orange;
+	}
+    </style>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-md" id="Pogi1" >
+		
+		<a class="navbar-brand" href="SA_ICT9R_Q4Project_Dhaliwal.html" style="color:deepskyblue ;" >Length Converter</a>
+		
+		<a class="navbar-brand" href="massconvertor.html" style="color:orange;" >Mass Converter</a>
+		
+		<a class="navbar-brand" href="temperatureconverter.html" style="color:hotpink;" >Temperature Converter</a>
+		
+		<a class="navbar-brand" href="heightconverter.html" style="color: teal;" >Height Converter</a>
+
+		<a class="navbar-brand" href="timeconverter.html" style="color: brown;" >Time Converter</a>
+		
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	</nav>
+
+
+	<br>
+	<div class="container text-center">
+		<h1>Online Premium Mass Converter</h1>
+		<p id="today"></p>
+		<div class="container">
+			<br>
+			<p>Input Measurement</p>
+			<input type="number" name="input1" id="input1" placeholder="Input Miligrams">
+			<br>
+			<p>Calculated Output</p>
+			<input type="number" name="input2" id="input2" placeholder="output">
+			<br>
+			<p>Metric Unit Converters</p>
+			<div class="button-container">
+				<button type="submit" onclick="convertMass1(event)">Centigrams</button>
+				<button type="submit" onclick="convertMass2(event)">Decigrams</button>
+				<button type="submit" onclick="convertMass3(event)">Decagrams</button>
+				<button type="submit" onclick="convertMass4(event)">Hectograms</button>
+				<button type="submit" onclick="convertMass5(event)">Kilograms</button>		
+			</div>
+			<p>English Unit Converters</p>
+			<div class="button-container">
+				<button type="submit" onclick="convertMass6(event)">Ounce</button>
+				<button type="submit" onclick="convertMass7(event)">Pounds</button>
+				<button type="submit" onclick="convertMass8(event)">Ton</button>
+				</div>		
+		</div>
+	</div>
+
+<script>
+function convertMass1(event) {
+  event.preventDefault();
+  let input1 = document.getElementById("input1").value;
+  let answer1 = input1 / 10;
+  document.getElementById("input2").value = answer1;
+}
+
+function convertMass2(event) {
+  event.preventDefault();
+  let input1 = document.getElementById("input1").value;
+  let answer1 = input1 / 100;
+  document.getElementById("input2").value = answer1;
+}
+
+function convertMass3(event) {
+  event.preventDefault();
+  let input1 = document.getElementById("input1").value;
+  let answer1 = input1 / 10000;
+  document.getElementById("input2").value = answer1;
+}
+
+function convertMass4(event) {
+  event.preventDefault();
+  let input1 = document.getElementById("input1").value;
+  let answer1 = input1 / 100000;
+  document.getElementById("input2").value = answer1;
+}
+
+function convertMass5(event) {
+  event.preventDefault();
+  let input1 = document.getElementById("input1").value;
+  let answer1 = input1 / 10000000;
+  document.getElementById("input2").value = answer1;
+}
+
+function convertMass6(event) {
+  event.preventDefault();
+  let input1 = document.getElementById("input1").value;
+  let answer1 = input1 / 28350 ;
+  document.getElementById("input2").value = answer1;
+}
+
+function convertMass7(event) {
+  event.preventDefault();
+  let input1 = document.getElementById("input1").value;
+  let answer1 = input1 /  453600 ;
+  document.getElementById("input2").value = answer1;
+}
+
+function convertMass8(event) {
+  event.preventDefault();
+  let input1 = document.getElementById("input1").value;
+  let answer1 = input1 / 9.072e+8;
+  document.getElementById("input2").value = answer1;
+}
+</script>
+	</div>
+</body>
+</html>
